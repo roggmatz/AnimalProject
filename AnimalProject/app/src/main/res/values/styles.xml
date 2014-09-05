@@ -2,7 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+
     </style>
 
     <style name="listItem_name" parent="@android:style/TextAppearance.Medium">
@@ -12,5 +12,6 @@
     <style name="listItem_details" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">#aaaaaa</item>
     </style>
+
 
 </resources>

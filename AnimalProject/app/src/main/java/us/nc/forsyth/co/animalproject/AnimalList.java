@@ -27,9 +27,9 @@ public class AnimalList extends Activity implements ActionBar.OnNavigationListen
     public boolean onNavigationItemSelected(int i, long l) {
         String[] categoriesList = getResources().getStringArray(R.array.categories_list);
         DetailsViewFragment deetsFrag = new DetailsViewFragment();
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.animal_details, deetsFrag, categoriesList[i]);
-        ft.commit();
+        //FragmentTransaction ft = getFragmentManager().beginTransaction();
+        //ft.replace(R.id.animal_details, deetsFrag, categoriesList[i]);
+        //ft.commit();
         return true;
     }
 
