@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        />
+    <LinearLayout android:id="@+id/list_item_info_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_weight="2">
+        <TextView android:id="@+id/list_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listItem_name"
+            android:text="@string/dummy_text"/>
+        <TextView android:id="@+id/list_item_breed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listItem_details"
+            android:text="@string/dummy_text"/>
+        <TextView android:id="@+id/list_item_size"
+            android:layout_width="wrap_content"
+            android:text="@string/dummy_text"
+            style="@style/listItem_details"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    <TextView android:id="@+id/list_item_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="1dp"
+        android:text="@string/dummy_text"
+        android:layout_weight="1"/>
+</LinearLayout>
