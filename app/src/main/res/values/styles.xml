@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:spinnerDropDownItemStyle">@style/CustomSpinnerDropDownStyle</item>
+    </style>
+
+    <style name="CustomSpinnerDropDownStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textAppearance">@style/customDropDownTextStyle</item>
+    </style>
+
+    <style name="customDropDownTextStyle" parent="@android:style/Widget">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="listItem_name" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="listItem_details" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#aaaaaa</item>
+    </style>
+
+
+</resources>
