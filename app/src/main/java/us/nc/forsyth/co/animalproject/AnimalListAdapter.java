@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -51,6 +52,7 @@ public class AnimalListAdapter extends BaseAdapter {
             holder.breed = (TextView) convertView.findViewById(R.id.list_item_breed);
             holder.size = (TextView) convertView.findViewById(R.id.list_item_size);
             holder.dateAdded = (TextView) convertView.findViewById(R.id.list_item_date);
+            holder.thumbnail = (ImageView) convertView.findViewById(R.id.list_item_thumbnail);
             convertView.setTag(holder);
         }
         else {
@@ -60,6 +62,7 @@ public class AnimalListAdapter extends BaseAdapter {
         holder.breed.setText(animalData.get(position).primaryBreed);
         holder.size.setText(animalData.get(position).size);
         holder.dateAdded.setText(animalData.get(position).dateAdded);
+        holder.thumbnail.setImageBitmap(animalData.get(position).image);
         Log.i("AnimalListAdapter.class", "Added Row:\n" + animalData.get(position).name
                 + ", " + animalData.get(position).primaryBreed
                 + ", " + animalData.get(position).size
@@ -72,6 +75,7 @@ public class AnimalListAdapter extends BaseAdapter {
         public TextView breed;
         public TextView size;
         public TextView dateAdded;
+        public ImageView thumbnail;
 
         public ViewHolder() {
 

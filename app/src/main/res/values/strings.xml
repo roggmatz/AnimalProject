@@ -16,5 +16,8 @@
     <string name="details_view_sex">Sex:</string>
     <string name="details_view_age">Age:</string>
     <string name="title_activity_details">Details</string>
+    <string name="no_connection_notice">No Internet Connection Available</string>
+    <string name="noconnection_try_again">Try Again</string>
+    <string name="actionBarMenu_refresh">Refresh</string>
 
 </resources>

@@ -1,5 +1,7 @@
 package us.nc.forsyth.co.animalproject;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by matamora on 9/4/2014.
  */
@@ -20,6 +22,7 @@ public class Animal {
     String markings;
     String size;
     String dateAdded;
+    Bitmap image;
 
     public Animal() {}
 

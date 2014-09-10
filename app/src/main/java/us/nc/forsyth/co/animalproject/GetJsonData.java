@@ -2,6 +2,7 @@ package us.nc.forsyth.co.animalproject;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -157,5 +158,4 @@ public class GetJsonData extends AsyncTask<String, Integer, ArrayList<Animal>> {
         dialog.dismiss();
 
     }
-
 }
