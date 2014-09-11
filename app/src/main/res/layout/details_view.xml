@@ -7,67 +7,159 @@
     android:orientation="vertical">
 
     <ImageView android:id="@+id/details_view_image"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:src="@drawable/detailplaceholder"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        android:scaleX="2"
+        android:scaleY="2"
         />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="32dp">
 
-        <LinearLayout
+        <LinearLayout android:id="@+id/details_wrapper_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView android:id="@+id/details_view_label_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                style="@style/listItem_label"
                 android:text="@string/details_view_name"/>
             <TextView android:id="@+id/details_view_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@android:style/TextAppearance.Large"
                 android:text="@string/dummy_text"/>
         </LinearLayout>
 
-        <LinearLayout
+        <LinearLayout android:id="@+id/detils_wrapper_id"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:text="ID:"
+                style="@style/listItem_label"/>
+            <TextView android:id="@+id/details_view_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@android:style/TextAppearance.Large"
+                android:text="1234567"/>
+        </LinearLayout>
+
+        <View android:id="@+id/horizontal_rule"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@id/details_wrapper_name"
+            />
+
+        <LinearLayout android:id="@+id/details_wrapper_primColor"
+            android:layout_below="@id/horizontal_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/details_view_label_primColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="1dp"
+                android:text="@string/details_view_primColor"
+                style="@style/listItem_label"/>
+            <TextView android:id="@+id/details_view_primColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_text"
+                style="@android:style/TextAppearance.Medium"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/details_wrapper_secColor"
+            android:layout_below="@id/horizontal_rule"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/details_view_label_secColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_view_secColor"
+                android:paddingBottom="1dp"
+                style="@style/listItem_label"/>
+            <TextView android:id="@+id/details_view_secColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_text"
+                style="@android:style/TextAppearance.Medium"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/details_wrapper_breed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/details_wrapper_primColor"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/listItem_label"
+                android:text="@string/details_view_breed"/>
+            <TextView android:id="@+id/details_view_breed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_text"
+                style="@android:style/TextAppearance.Medium"/>
+            </LinearLayout>
+
+        <LinearLayout android:id="@+id/details_wrapper_secBreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/details_wrapper_secColor"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_view_secBreed"
+                android:paddingBottom="1dp"
+                style="@style/listItem_label"/>
+            <TextView android:id="@+id/details_view_secBreed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_text"
+                style="@android:style/TextAppearance.Medium"/>
+            </LinearLayout>
+
+        <LinearLayout android:id="@+id/details_wrapper_dateAdd"
+            android:layout_below="@id/details_wrapper_breed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal">
             <TextView android:id="@+id/details_view_label_dateAdd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/details_view_dateAdd"/>
+                android:text="@string/details_view_dateAdd"
+                android:paddingBottom="1dp"
+                style="@style/listItem_label"/>
             <TextView android:id="@+id/details_view_dateAdd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dummy_text"/>
+                android:text="@string/dummy_text"
+                style="@android:style/TextAppearance.Medium"/>
         </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView android:id="@+id/details_view_label_primColor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/details_view_primColor"/>
-        <TextView android:id="@+id/details_view_primColor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView android:id="@+id/details_view_label_secColor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/details_view_secColor"/>
-        <TextView android:id="@+id/details_view_secColor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

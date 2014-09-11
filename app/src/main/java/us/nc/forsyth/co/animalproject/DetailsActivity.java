@@ -52,6 +52,7 @@ public class DetailsActivity extends Activity {
         try {
             img = pictureGetter.get();
             imageView.setImageBitmap(img);
+            Log.i("DetailImage Height", Integer.toString(imageView.getHeight()));
         }
         catch (Exception e) {
             Log.i("DetailsActivity.class", e.toString());
@@ -63,12 +64,18 @@ public class DetailsActivity extends Activity {
         //on details_view.xml
         TextView var = (TextView) findViewById(R.id.details_view_name);
         var.setText(s[NAME]);
+        var = (TextView) findViewById(R.id.details_view_id);
+        var.setText(s[ID]);
         var = (TextView) findViewById(R.id.details_view_dateAdd);
         var.setText(s[DATE_ADDED]);
         var = (TextView) findViewById(R.id.details_view_primColor);
         var.setText(s[PRIMARY_COLOR]);
         var = (TextView) findViewById(R.id.details_view_secColor);
         var.setText(s[SECONDARY_COLOR]);
+        var = (TextView) findViewById(R.id.details_view_breed);
+        var.setText(s[BREED_GROUP]);
+        var = (TextView) findViewById(R.id.details_view_secBreed);
+        var.setText(s[SECONDARY_BREED]);
     }
 
     private void format() {
@@ -84,7 +91,6 @@ public class DetailsActivity extends Activity {
             }
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

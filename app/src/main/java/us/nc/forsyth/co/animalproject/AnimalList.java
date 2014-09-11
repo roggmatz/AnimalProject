@@ -55,6 +55,7 @@ public class AnimalList extends ListActivity implements ActionBar.OnNavigationLi
                 listenerImporter.execute(URL_DOGS);
                 break;
             case CAT:
+                listenerImporter.execute(URL_CATS);
                 break;
             case OTHER:
                 listenerImporter.execute(URL_OTHER);
@@ -90,7 +91,6 @@ public class AnimalList extends ListActivity implements ActionBar.OnNavigationLi
             listenerListView.setAdapter(animalListAdapter);
         }
         else {
-            final int j = i;
             ArrayList<String> d = new ArrayList<String>();
             d.add("FOO");
             NoConnectionAdapter noConnectionAdapter = new NoConnectionAdapter(this, d);

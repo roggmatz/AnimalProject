@@ -61,7 +61,15 @@ public class AnimalListAdapter extends BaseAdapter {
         holder.name.setText(animalData.get(position).name);
         holder.breed.setText(animalData.get(position).primaryBreed);
         holder.size.setText(animalData.get(position).size);
-        holder.dateAdded.setText(animalData.get(position).dateAdded);
+        if(animalData.get(position).dateAdded.length() == 8) {
+            holder.dateAdded.setText("   " + animalData.get(position).dateAdded);
+        }
+        else if(animalData.get(position).dateAdded.length() == 9) {
+            holder.dateAdded.setText(" " + animalData.get(position).dateAdded);
+        }
+        else {
+            holder.dateAdded.setText(animalData.get(position).dateAdded);
+        }
         holder.thumbnail.setImageBitmap(animalData.get(position).image);
         Log.i("AnimalListAdapter.class", "Added Row:\n" + animalData.get(position).name
                 + ", " + animalData.get(position).primaryBreed

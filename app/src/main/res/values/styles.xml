@@ -19,6 +19,16 @@
 
     </style>
 
+    <style name="listItem_label" parent="@android:style/TextAppearance.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:color">@android:color/primary_text_light</item>
+
+    </style>
+
+    <style name="detailsview_name" parent="@android:style/TextAppearance.Large">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="listItem_details" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">#aaaaaa</item>
     </style>
