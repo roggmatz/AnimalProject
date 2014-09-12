@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/details_view_layout"
     android:layout_width="match_parent"
@@ -66,100 +69,208 @@
             android:layout_below="@id/details_wrapper_name"
             />
 
-        <LinearLayout android:id="@+id/details_wrapper_primColor"
+        <LinearLayout android:id="@+id/details_wrapper_color"
             android:layout_below="@id/horizontal_rule"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:orientation="horizontal">
-            <TextView android:id="@+id/details_view_label_primColor"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:paddingBottom="1dp"
-                android:text="@string/details_view_primColor"
-                style="@style/listItem_label"/>
-            <TextView android:id="@+id/details_view_primColor"
-                android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:id="@+id/details_view_label_primColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="1dp"
+                    android:text="@string/details_view_primColor"
+                    style="@style/listItem_label"
+                    android:layout_weight="2"/>
+                <TextView android:id="@+id/details_view_primColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_text"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_weight="3"
+/>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="@string/dummy_text"
-                style="@android:style/TextAppearance.Medium"/>
-        </LinearLayout>
-
-        <LinearLayout android:id="@+id/details_wrapper_secColor"
-            android:layout_below="@id/horizontal_rule"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView android:id="@+id/details_view_label_secColor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/details_view_secColor"
-                android:paddingBottom="1dp"
-                style="@style/listItem_label"/>
-            <TextView android:id="@+id/details_view_secColor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dummy_text"
-                style="@android:style/TextAppearance.Medium"/>
+                android:orientation="horizontal">
+                <TextView android:id="@+id/details_view_label_secColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_view_secColor"
+                    android:paddingBottom="1dp"
+                    style="@style/listItem_label"
+                    android:layout_weight="2"/>
+                <TextView android:id="@+id/details_view_secColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_text"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_weight="3"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout android:id="@+id/details_wrapper_breed"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/details_wrapper_primColor"
+            android:layout_below="@id/details_wrapper_color"
             android:layout_marginTop="15dp"
             android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                style="@style/listItem_label"
-                android:text="@string/details_view_breed"/>
-            <TextView android:id="@+id/details_view_breed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dummy_text"
-                style="@android:style/TextAppearance.Medium"/>
-            </LinearLayout>
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/listItem_label"
+                    android:layout_weight="2"
+                    android:text="@string/details_view_breed"/>
+                <TextView android:id="@+id/details_view_breed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_text"
+                    android:layout_weight="3"
 
-        <LinearLayout android:id="@+id/details_wrapper_secBreed"
-            android:layout_width="wrap_content"
+                    style="@android:style/TextAppearance.Medium"/>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_view_secBreed"
+                    android:paddingBottom="1dp"
+                    android:layout_weight="2"
+                    style="@style/listItem_label"/>
+                <TextView android:id="@+id/details_view_secBreed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_text"
+                    android:layout_weight="3"
+                    style="@android:style/TextAppearance.Medium"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/details_wrapper_sexAge"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/details_wrapper_breed"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_view_sex"
+                    android:layout_weight="2"
+                    style="@style/listItem_label"/>
+                <TextView android:id="@+id/details_view_sex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_text"
+                    android:layout_weight="3"
+
+                    style="@android:style/TextAppearance.Medium"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_view_age"
+                    android:layout_weight="2"
+                    style="@style/listItem_label"/>
+                <TextView android:id="@+id/details_view_age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_text"
+                    android:layout_weight="3"
+                    style="@android:style/TextAppearance.Medium"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/details_wrapper_markLoc"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:layout_below="@id/details_wrapper_secColor"
-            android:layout_alignParentRight="true"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/details_wrapper_sexAge">
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/details_view_secBreed"
-                android:paddingBottom="1dp"
-                style="@style/listItem_label"/>
-            <TextView android:id="@+id/details_view_secBreed"
-                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_view_markings"
+                    style="@style/listItem_label"
+                    android:layout_weight="2"/>
+                <TextView android:id="@+id/details_view_markings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_text"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_weight="3"/>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/dummy_text"
-                style="@android:style/TextAppearance.Medium"/>
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_view_kennelNo"
+                    style="@style/listItem_label"
+                    android:layout_weight="2"/>
+                <TextView android:id="@+id/details_view_kennelNo"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_text"
+                    style="@android:style/TextAppearance.Medium"/>
+                </LinearLayout>
             </LinearLayout>
 
         <LinearLayout android:id="@+id/details_wrapper_dateAdd"
-            android:layout_below="@id/details_wrapper_breed"
-            android:layout_width="wrap_content"
+            android:layout_below="@id/details_wrapper_markLoc"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:orientation="horizontal">
             <TextView android:id="@+id/details_view_label_dateAdd"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/details_view_dateAdd"
                 android:paddingBottom="1dp"
+                android:layout_weight="1"
                 style="@style/listItem_label"/>
             <TextView android:id="@+id/details_view_dateAdd"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/dummy_text"
+                android:layout_weight="3"
                 style="@android:style/TextAppearance.Medium"/>
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
+</ScrollView>

@@ -31,7 +31,6 @@ public class DetailsActivity extends Activity {
     final int MARKINGS = 13;
     final int SIZE = 14;
     final int DATE_ADDED = 15;
-    final int IMAGE = 16;
 
     String[] selectedAnimal = new String[16];
     final String URL_START = "http://forsyth.cc/controls/DisplayImage.ashx?ID=";
@@ -76,18 +75,51 @@ public class DetailsActivity extends Activity {
         var.setText(s[BREED_GROUP]);
         var = (TextView) findViewById(R.id.details_view_secBreed);
         var.setText(s[SECONDARY_BREED]);
+        var = (TextView) findViewById(R.id.details_view_age);
+        var.setText(s[AGE]);
+        var = (TextView) findViewById(R.id.details_view_sex);
+        var.setText(s[SEX]);
+        var = (TextView) findViewById(R.id.details_view_markings);
+        var.setText(s[MARKINGS]);
+        var = (TextView) findViewById(R.id.details_view_kennelNo);
+        var.setText(s[KENNEL_NO]);
+
     }
 
     private void format() {
-        //Function takes the strings stored in selectedAnimal[] and converts them from ABC to Abc
+        //Function takes the strings stored in selectedAnimal[] and "prettifies" them
         String initial;
         String rest;
         for(int i = 0; i < selectedAnimal.length; i++) {
-            if(selectedAnimal[i].charAt(0) > 64 && selectedAnimal[i].charAt(0) < 91) {
+            if(i != KENNEL_NO && selectedAnimal[i].charAt(0) > 64
+                    && selectedAnimal[i].charAt(0) < 91) {
                 initial = selectedAnimal[i].substring(0, 1);
                 rest = selectedAnimal[i].substring(1);
                 rest = rest.toLowerCase();
                 selectedAnimal[i] = initial + rest;
+            }
+            if(selectedAnimal[i].toLowerCase().equals("null")) {
+                selectedAnimal[i] = "Unavailable";
+            }
+
+            if(i == SEX && selectedAnimal[SEX].charAt(0) == 'M') {
+                selectedAnimal[SEX] = "Male";
+            }
+            if(i == SEX && selectedAnimal[SEX].charAt(0) == 'F') {
+                selectedAnimal[SEX] = "Female";
+            }
+            if(i == SEX && selectedAnimal[SEX].charAt(0) == 'N') {
+                selectedAnimal[SEX] = "Neutered";
+            }
+            if(i == AGE && selectedAnimal[AGE].charAt(0) == '0') {
+                selectedAnimal[AGE] = "4-6 Months";
+            }
+            if(i == AGE && !selectedAnimal[AGE].equals("4-6 Months")) {
+                selectedAnimal[AGE] += " Years";
+            }
+            if(!selectedAnimal[i].contains(" ") && !selectedAnimal[i].contains("\n")
+                    && i != ID && i != NAME) {
+                selectedAnimal[i] += "\n";
             }
         }
     }
@@ -104,10 +136,7 @@ public class DetailsActivity extends Activity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
         return super.onOptionsItemSelected(item);
     }
 }

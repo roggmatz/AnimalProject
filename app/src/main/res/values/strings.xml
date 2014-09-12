@@ -21,4 +21,17 @@
     <string name="noconnection_try_again">Try Again</string>
     <string name="actionBarMenu_refresh">Refresh</string>
     <string name="details_view_secBreed">SECONDARY\nBREED:</string>
+    <string name="details_title_AdoptionInfo">ADOPTION INFORMATION</string>
+    <string name="details_view_markings">MARKINGS:</string>
+    <string name="details_view_kennelNo">LOCATION:</string>
+
+    <string name="details_message_adoptionInfo">
+        If you are interested in adopting this animal,
+        please print this page and come to the Shelter
+        as soon as possible. If this particular pet
+        already has a new home, the Shelter probably has
+        another companion waiting just for you.
+        For fees and other information,
+        please see the link below:
+    </string>
 </resources>

@@ -156,6 +156,5 @@ public class GetJsonData extends AsyncTask<String, Integer, ArrayList<Animal>> {
 
     protected void onPostExecute(ArrayList<Animal> result) {
         dialog.dismiss();
-
     }
 }
